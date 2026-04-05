@@ -3,6 +3,7 @@ import { JwtModule } from '@nestjs/jwt'
 import type { StringValue } from 'ms'
 
 import { AppController } from './app.controller'
+import { QuoteModule } from './quote/quote.module'
 import { UserModule } from './user/user.module'
 import { env } from './utils/env'
 
@@ -13,7 +14,8 @@ import { env } from './utils/env'
             secret: env.JWT_SECRET,
             signOptions: { expiresIn: env.JWT_EXPIRES_IN as StringValue | number }
         }),
-        UserModule
+        UserModule,
+        QuoteModule
     ],
     controllers: [AppController],
     providers: []
