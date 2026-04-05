@@ -17,6 +17,9 @@ async function bootstrap() {
 
     app.use(helmet())
 
+    const corsOptions = env.ENABLE_CORS ? { origin: [env.CLIENT_URL], credentials: true } : undefined
+    app.enableCors(corsOptions)
+
     app.setGlobalPrefix('api')
 
     app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }))

@@ -22,6 +22,12 @@ export const env = {
     },
     get OTEL_EXPORTER_OTLP_ENDPOINT(): string {
         return required('OTEL_EXPORTER_OTLP_ENDPOINT')
+    },
+    get ENABLE_CORS(): boolean {
+        return required('ENABLE_CORS') === 'true'
+    },
+    get CLIENT_URL(): string {
+        return required('CLIENT_URL')
     }
 } as const
 
