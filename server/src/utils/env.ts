@@ -6,9 +6,17 @@ function required(key: string): string {
 
 export const env = {
     get PORT(): number {
-        return parseInt(required('PORT'))
+        return parseInt(required('PORT'), 10)
     },
     get DATABASE_URL(): string {
         return required('DATABASE_URL')
+    },
+    get JWT_SECRET(): string {
+        return required('JWT_SECRET')
+    },
+    get JWT_EXPIRES_IN(): string {
+        return required('JWT_EXPIRES_IN')
     }
 } as const
+
+export const SALT_ROUNDS: number = 10

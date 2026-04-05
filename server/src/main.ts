@@ -1,3 +1,4 @@
+import { ValidationPipe } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 import helmet from 'helmet'
 
@@ -11,6 +12,8 @@ async function bootstrap() {
     app.use(helmet())
 
     app.setGlobalPrefix('api')
+
+    app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }))
 
     await app.listen(env.PORT)
 }
