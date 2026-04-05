@@ -1,0 +1,203 @@
+@use "@styles/variables" as *;
+
+.page {
+    min-height: 100vh;
+    background-color: $gray-50;
+}
+
+.loading {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $gray-500;
+}
+
+.errorScreen {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 57px);
+    text-align: center;
+}
+
+.errorTitle {
+    font-size: $text-xl;
+    font-weight: 700;
+    color: $red-600;
+    margin-bottom: $space-2;
+}
+
+.errorDesc {
+    font-size: $text-sm;
+    color: $gray-500;
+}
+
+.header {
+    background-color: $white;
+    border-bottom: 1px solid $gray-200;
+    padding: $space-4 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+}
+
+.backLink {
+    color: $green-600;
+    font-size: $text-sm;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.title {
+    font-size: $text-xl;
+    font-weight: 700;
+    color: $green-700;
+}
+
+.main {
+    max-width: $max-w-3xl;
+    margin: 0 auto;
+    padding: $space-8 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detailGrid {
+    background-color: $white;
+    border-radius: $radius-xl;
+    box-shadow: $shadow;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $space-4;
+}
+
+.fieldLabel {
+    font-size: $text-xs;
+    color: $gray-500;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.fieldValue {
+    color: $gray-900;
+    font-weight: 500;
+}
+
+.price {
+    font-size: $text-2xl;
+    font-weight: 700;
+    color: $gray-900;
+}
+
+.bandRow {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+}
+
+.bandA {
+    padding: $space-1 $space-3;
+    border-radius: $radius-full;
+    font-size: $text-sm;
+    font-weight: 700;
+    background-color: $green-100;
+    color: $green-700;
+}
+
+.bandB {
+    padding: $space-1 $space-3;
+    border-radius: $radius-full;
+    font-size: $text-sm;
+    font-weight: 700;
+    background-color: $yellow-100;
+    color: $yellow-700;
+}
+
+.bandC {
+    padding: $space-1 $space-3;
+    border-radius: $radius-full;
+    font-size: $text-sm;
+    font-weight: 700;
+    background-color: $red-100;
+    color: $red-700;
+}
+
+.bandDesc {
+    font-size: $text-sm;
+    color: $gray-600;
+}
+
+.offersCard {
+    background-color: $white;
+    border-radius: $radius-xl;
+    box-shadow: $shadow;
+    overflow: hidden;
+}
+
+.offersHeader {
+    padding: $space-4 1.5rem;
+    border-bottom: 1px solid $gray-100;
+}
+
+.offersTitle {
+    font-weight: 600;
+    color: $gray-900;
+}
+
+.table {
+    width: 100%;
+    font-size: $text-sm;
+    color: $gray-900;
+    border-collapse: collapse;
+}
+
+.thead {
+    background-color: $gray-50;
+    color: $gray-600;
+    text-transform: uppercase;
+    font-size: $text-xs;
+}
+
+.thLeft {
+    padding: $space-3 $space-4;
+    text-align: left;
+}
+
+.thRight {
+    padding: $space-3 $space-4;
+    text-align: right;
+}
+
+.tbody tr + tr {
+    border-top: 1px solid $gray-100;
+}
+
+.tr {
+    &:hover {
+        background-color: $gray-50;
+    }
+}
+
+.td {
+    padding: $space-3 $space-4;
+    font-weight: 500;
+}
+
+.tdRight {
+    padding: $space-3 $space-4;
+    text-align: right;
+}
+
+.tdPayment {
+    padding: $space-3 $space-4;
+    text-align: right;
+    font-weight: 600;
+    color: $green-700;
+}

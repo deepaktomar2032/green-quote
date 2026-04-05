@@ -1,0 +1,199 @@
+@use "@styles/variables" as *;
+
+.page {
+    min-height: 100vh;
+    background-color: $gray-50;
+}
+
+.header {
+    background-color: $white;
+    border-bottom: 1px solid $gray-200;
+    padding: $space-4 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: $text-xl;
+    font-weight: 700;
+    color: $green-700;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+}
+
+.userEmail {
+    font-size: $text-sm;
+    color: $gray-600;
+}
+
+.logoutBtn {
+    font-size: $text-sm;
+    color: $gray-500;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        color: $red-600;
+    }
+}
+
+.main {
+    max-width: $max-w-5xl;
+    margin: 0 auto;
+    padding: $space-8 1.5rem;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.pageTitle {
+    font-size: $text-2xl;
+    font-weight: 700;
+    color: $gray-900;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+}
+
+.btnPrimary {
+    background-color: $green-600;
+    color: $white;
+    padding: $space-2 $space-4;
+    border-radius: $radius-lg;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $green-700;
+    }
+}
+
+.tableWrapper {
+    background-color: $white;
+    border-radius: $radius-xl;
+    box-shadow: $shadow;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    font-size: $text-sm;
+    color: $gray-900;
+    border-collapse: collapse;
+}
+
+.thead {
+    background-color: $gray-50;
+    color: $gray-600;
+    text-transform: uppercase;
+    font-size: $text-xs;
+}
+
+.thLeft {
+    padding: $space-3 $space-4;
+    text-align: left;
+}
+
+.thRight {
+    padding: $space-3 $space-4;
+    text-align: right;
+}
+
+.thCenter {
+    padding: $space-3 $space-4;
+    text-align: center;
+}
+
+.th {
+    padding: $space-3 $space-4;
+}
+
+.tbody tr + tr {
+    border-top: 1px solid $gray-100;
+}
+
+.tr {
+    &:hover {
+        background-color: $gray-50;
+    }
+}
+
+.tdDate {
+    padding: $space-3 $space-4;
+    color: $gray-600;
+}
+
+.td {
+    padding: $space-3 $space-4;
+}
+
+.tdRight {
+    padding: $space-3 $space-4;
+    text-align: right;
+}
+
+.tdCenter {
+    padding: $space-3 $space-4;
+    text-align: center;
+}
+
+.bandA {
+    padding: 0.125rem $space-2;
+    border-radius: $radius-full;
+    font-size: $text-xs;
+    font-weight: 600;
+    background-color: $green-100;
+    color: $green-700;
+}
+
+.bandB {
+    padding: 0.125rem $space-2;
+    border-radius: $radius-full;
+    font-size: $text-xs;
+    font-weight: 600;
+    background-color: $yellow-100;
+    color: $yellow-700;
+}
+
+.bandC {
+    padding: 0.125rem $space-2;
+    border-radius: $radius-full;
+    font-size: $text-xs;
+    font-weight: 600;
+    background-color: $red-100;
+    color: $red-700;
+}
+
+.viewLink {
+    color: $green-600;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.loadingMsg {
+    color: $gray-500;
+}
+
+.errorMsg {
+    color: $red-600;
+}
+
+.emptyMsg {
+    color: $gray-500;
+}

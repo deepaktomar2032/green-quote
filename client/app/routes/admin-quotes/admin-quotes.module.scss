@@ -1,0 +1,205 @@
+@use "@styles/variables" as *;
+
+.page {
+    min-height: 100vh;
+    background-color: $gray-50;
+}
+
+.header {
+    background-color: $white;
+    border-bottom: 1px solid $gray-200;
+    padding: $space-4 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+}
+
+.backLink {
+    color: $green-600;
+    font-size: $text-sm;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.title {
+    font-size: $text-xl;
+    font-weight: 700;
+    color: $green-700;
+}
+
+.main {
+    max-width: $max-w-6xl;
+    margin: 0 auto;
+    padding: $space-8 1.5rem;
+}
+
+.searchWrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.searchInput {
+    width: 100%;
+    border: 1px solid $gray-300;
+    border-radius: $radius-lg;
+    padding: $space-2 2rem $space-2 $space-3;
+    color: $gray-900;
+    font-size: $text-sm;
+
+    &:focus {
+        outline: none;
+        box-shadow: $ring-green;
+    }
+}
+
+.clearBtn {
+    position: absolute;
+    right: $space-2;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $gray-400;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    line-height: 1;
+
+    &:hover {
+        color: $gray-600;
+    }
+}
+
+.loadingMsg {
+    color: $gray-500;
+}
+
+.errorMsg {
+    color: $red-600;
+}
+
+.emptyMsg {
+    color: $gray-500;
+}
+
+.tableWrapper {
+    background-color: $white;
+    border-radius: $radius-xl;
+    box-shadow: $shadow;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    font-size: $text-sm;
+    color: $gray-900;
+    border-collapse: collapse;
+}
+
+.thead {
+    background-color: $gray-50;
+    color: $gray-600;
+    text-transform: uppercase;
+    font-size: $text-xs;
+}
+
+.thLeft {
+    padding: $space-3 $space-4;
+    text-align: left;
+}
+
+.thRight {
+    padding: $space-3 $space-4;
+    text-align: right;
+}
+
+.thCenter {
+    padding: $space-3 $space-4;
+    text-align: center;
+}
+
+.th {
+    padding: $space-3 $space-4;
+}
+
+.tbody tr + tr {
+    border-top: 1px solid $gray-100;
+}
+
+.tr {
+    &:hover {
+        background-color: $gray-50;
+    }
+}
+
+.tdDate {
+    padding: $space-3 $space-4;
+    color: $gray-600;
+}
+
+.td {
+    padding: $space-3 $space-4;
+}
+
+.tdRight {
+    padding: $space-3 $space-4;
+    text-align: right;
+}
+
+.tdCenter {
+    padding: $space-3 $space-4;
+    text-align: center;
+}
+
+.userName {
+    font-weight: 500;
+}
+
+.userEmail {
+    color: $gray-500;
+    font-size: $text-xs;
+}
+
+.bandA {
+    padding: 0.125rem $space-2;
+    border-radius: $radius-full;
+    font-size: $text-xs;
+    font-weight: 600;
+    background-color: $green-100;
+    color: $green-700;
+}
+
+.bandB {
+    padding: 0.125rem $space-2;
+    border-radius: $radius-full;
+    font-size: $text-xs;
+    font-weight: 600;
+    background-color: $yellow-100;
+    color: $yellow-700;
+}
+
+.bandC {
+    padding: 0.125rem $space-2;
+    border-radius: $radius-full;
+    font-size: $text-xs;
+    font-weight: 600;
+    background-color: $red-100;
+    color: $red-700;
+}
+
+.viewLink {
+    color: $green-600;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

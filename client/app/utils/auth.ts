@@ -21,6 +21,10 @@ function getCookie(): string | null {
     return match ? decodeURIComponent(match[2]) : null
 }
 
+function deleteCookie(): void {
+    document.cookie = `${TOKEN_KEY}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`
+}
+
 export function setToken(token: string): void {
     if (isBrowser) setCookie(token)
 }
@@ -28,6 +32,10 @@ export function setToken(token: string): void {
 export function getToken(): string | null {
     if (!isBrowser) return null
     return getCookie()
+}
+
+export function clearToken(): void {
+    if (isBrowser) deleteCookie()
 }
 
 export function getPayload(): JwtPayload | null {
