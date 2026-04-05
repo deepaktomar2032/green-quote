@@ -74,8 +74,8 @@ npm run test        # unit tests
 Three services orchestrated by Docker Compose:
 
 1. NestJS API Server - auth, business logic, pricing computation, persistence.
-2. React Router Client - SPA communicating with the API via JWT bearer tokens.
-3. Aspire Dashboard - OpenTelemetry collector (gRPC `18889`) + real-time UI for traces, metrics, and logs.
+2. React Router Client - React client application communicating with the API via JWT bearer tokens.
+3. Aspire Dashboard - OpenTelemetry collector (gRPC `18889`) + UI for structured logs, traces and metrics.
 
 ### Architectural Decisions and Trade-offs
 
