@@ -1,3 +1,5 @@
 include:
   - path: server/docker-compose.yml
     env_file: ./server/.env
+  - path: client/docker-compose.yml
+    env_file: ./client/.env

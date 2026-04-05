@@ -1,0 +1,13 @@
+services:
+  client:
+    build:
+      context: .
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_BASE_URL=${VITE_API_BASE_URL}
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - server
