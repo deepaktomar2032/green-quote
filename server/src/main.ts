@@ -1,3 +1,5 @@
+import './polyfills'
+
 import { ValidationPipe } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 import helmet from 'helmet'
@@ -6,6 +8,7 @@ import { Logger } from 'nestjs-pino'
 import { env } from 'src/utils/env'
 
 import { AppModule } from './app.module'
+import { setupShutdownHandlers } from './instrumentation'
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule, { bufferLogs: true })
@@ -18,6 +21,8 @@ async function bootstrap() {
     app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }))
 
     await app.listen(env.PORT)
+
+    setupShutdownHandlers(app)
 }
 
 bootstrap().catch((error) => {

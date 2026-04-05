@@ -16,6 +16,12 @@ export const env = {
     },
     get JWT_EXPIRES_IN(): string {
         return required('JWT_EXPIRES_IN')
+    },
+    get OTEL_SERVICE_NAME(): string {
+        return required('OTEL_SERVICE_NAME')
+    },
+    get OTEL_EXPORTER_OTLP_ENDPOINT(): string {
+        return required('OTEL_EXPORTER_OTLP_ENDPOINT')
     }
 } as const
 
