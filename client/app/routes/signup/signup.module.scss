@@ -1,0 +1,99 @@
+@use "@styles/variables" as *;
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-50;
+}
+
+.card {
+    width: 100%;
+    max-width: $max-w-md;
+    background-color: $white;
+    border-radius: $radius-xl;
+    box-shadow: $shadow;
+    padding: $space-8;
+}
+
+.title {
+    font-size: $text-2xl;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: $gray-900;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+}
+
+.label {
+    display: block;
+    font-size: $text-sm;
+    font-weight: 500;
+    color: $gray-700;
+    margin-bottom: $space-1;
+}
+
+.passwordHint {
+    color: $gray-400;
+    font-weight: 400;
+}
+
+.input {
+    width: 100%;
+    border: 1px solid $gray-300;
+    border-radius: $radius-lg;
+    padding: $space-2 $space-3;
+    color: $gray-900;
+    font-size: $text-sm;
+
+    &:focus {
+        outline: none;
+        box-shadow: $ring-green;
+    }
+}
+
+.error {
+    color: $red-600;
+    font-size: $text-sm;
+}
+
+.btn {
+    width: 100%;
+    background-color: $green-600;
+    color: $white;
+    padding: $space-2 0;
+    border-radius: $radius-lg;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $green-700;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.footer {
+    margin-top: $space-4;
+    font-size: $text-sm;
+    color: $gray-600;
+    text-align: center;
+}
+
+.link {
+    color: $green-600;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

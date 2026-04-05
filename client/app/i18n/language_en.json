@@ -1,0 +1,21 @@
+{
+    "-------- Login --------": "",
+    "loginTitle": "Sign in to GreenQuote",
+    "loginEmail": "Email",
+    "loginPassword": "Password",
+    "loginSubmit": "Sign in",
+    "loginSubmitLoading": "Signing in…",
+    "loginFooter": "No account?",
+    "loginSignUp": "Sign up",
+
+    "-------- Signup --------": "",
+    "signupTitle": "Create your account",
+    "signupFullName": "Full name",
+    "signupEmail": "Email",
+    "signupPassword": "Password",
+    "signupPasswordHint": "(min 8 characters)",
+    "signupSubmit": "Create account",
+    "signupSubmitLoading": "Creating account…",
+    "signupFooter": "Already have an account?",
+    "signupSignIn": "Sign in"
+}
