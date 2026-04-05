@@ -1,0 +1,3 @@
+include:
+  - path: server/docker-compose.yml
+    env_file: ./server/.env
